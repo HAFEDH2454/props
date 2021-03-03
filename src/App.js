@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'; 
+import _profile, {_handleName} from './profile/profile';
+
+
+var profi ={ fullName:"hafedh", 
+    bio:"mon_bio",
+    profession:"mon_profession"
+}
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     <_profile profi={profi.fullName}/><br></br>
+     <_profile profi={profi.bio}/><br></br>
+     <_profile profi={profi.profession}/><br></br><br></br>
+     <_handleName profi={profi.fullName}/>
+     
     </div>
   );
 }
